@@ -53,3 +53,47 @@ Change the value attribute of the email field to "koalathebear@gmail.com".
 
 var email = document.querySelector('#email')
 email.value= 'koala'
+
+
+
+
+Panda the Bear is lying about their skills! Take the "time travel" skill off the page to satisfy your personal sense of justice. Use your googling and docs-skimming skillz to find a jQuery function that will allow you to remove elements from the DOM. (hint: there are multiple ways of doing this, but the parent() function might be useful when it comes to selecting the right element)
+
+
+var timeTravel = document.getElementById('time-travel');
+var divBar = document.getElementsByClassName('bar-default')[2];
+
+divBar.removeChild(timeTravel);
+
+
+That drawing of Pikachu is really cute. Let’s duplicate it using cloneNode() and insert it at the bottom of the .portfolio-container using insertAdjacentHTML() or appendChild().
+
+var pikachu = document.querySelector('#right-image img');
+var pikachuClone = pikachu.CloneNode();
+var portfoilioContainer= document.querySelector('.portfolio-container');
+
+portfolioContainer.appendChild(pikachuClone);
+
+Wow, that was so satisfying I think we should do it 10 more times. Use a for loop to help you do this.
+
+for (var i = 0; i<10; i++) { var pikachuCloneTwo = pikachu.cloneNode(); porfolioContainer.appendChild(pikachuCloneTwo);
+}
+
+Let’s add a message about when the page was last updated. We'll do this by appending a new <li> element to the <ul> in the sidebar (you might need to refresh the page to bring back the list items that we emptied out earlier).
+
+var listItem = document.createElement('li');
+var leftSpan = document.createElement('span');
+var textNode = document.createTextNode('Page Last Updated')
+
+leftSpan.appendChild(textNode);
+listItem.appendChild(leftSpan);
+
+var bioInfo = document.querySelector('.bio-info');
+bioInfo.appendChild(listItem);
+
+var rightSpan = document.createElement('span');
+var rightText= document.createTextNode('Thursday November 23rd 2017');
+rightSpan.appendChild(rightText);
+
+listItem.className = 'bio-info-item'
+listItem.appendChild(rightSpan)
